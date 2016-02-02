@@ -1,37 +1,53 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
+[Serializable]
 public class World : MonoBehaviour {
 
 	public Dictionary<WorldPos, Chunk> chunks = new Dictionary<WorldPos, Chunk> ();
 	public GameObject chunkPrefab;
 	public static int chunkWidth = 16;
 	public static int chunkHeight = 64;
+	public static bool saving = false;
 	public string worldName = "world";
 	public int seed;
 	public static Vector3[] grainOffset;
+	public bool plane = false;
 
 	void Awake ()
 	{
 		if (seed == 0) // if seed ==0 then seed is random
-			seed = Random.Range(0, int.MaxValue);
+			seed = UnityEngine.Random.Range(0, int.MaxValue);
 
 		SetGrainOffset (5);
 	}
 
 	void Start() {
+		
 	}
 
-	void Update() {  
+	void Update() {
+		if (saving) {
+			ManualSave (this);
+			saving = false;
+		}
+	}
+
+	public void ManualSave(World world) {
+		foreach (Chunk chunk in world.chunks.Values)
+		{
+			Serialization.SaveChunk (chunk);
+		}
 	}
 
 	public static void SetGrainOffset(int nb) {
 		grainOffset = new Vector3[nb];
-		//Random.seed = world.seed;
+		//UnityEngine.Random.seed = world.seed;
 
 		for(int i=0; i<nb; i++)
-			grainOffset[i] = new Vector3 (Random.value * 10000, Random.value * 10000, Random.value * 10000);
+			grainOffset[i] = new Vector3 (UnityEngine.Random.value * 10000, UnityEngine.Random.value * 10000, UnityEngine.Random.value * 10000);
 	}
 
 	public Vector3 GetGrainOffset(int i) {
@@ -130,7 +146,7 @@ public class World : MonoBehaviour {
 		if (chunks.TryGetValue(new WorldPos(x, y, z), out chunk))
 		{
 			Serialization.SaveChunk (chunk);
-			Object.Destroy(chunk.gameObject);
+			UnityEngine.Object.Destroy(chunk.gameObject);
 			chunks.Remove(new WorldPos(x, y, z));
 		}
 	}

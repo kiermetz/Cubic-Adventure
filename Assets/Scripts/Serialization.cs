@@ -7,7 +7,7 @@ using System.Runtime.Serialization;
 
 public static class Serialization{
 
-	public static string saveFolderName = "cubicAdventureSaves";
+	public static string saveFolderName = "saves";
 
 	public static string SaveLocation(string worldname) {
 		string saveLocation = saveFolderName + "/" + worldname + "/";
@@ -50,8 +50,9 @@ public static class Serialization{
 		//chunk.blocks = (Block[,,])formatter.Deserialize (stream);
 
 		Save save = (Save)formatter.Deserialize (stream);
-		foreach (var block in save.blocks)
+		foreach (var block in save.blocks) {
 			chunk.blocks [block.Key.x, block.Key.y, block.Key.z] = block.Value;
+		}
 		
 		stream.Close ();
 		return true;

@@ -29,7 +29,7 @@ public class Chunk : MonoBehaviour {
 	public World world;
 	public WorldPos pos;
 	public bool update = false;
-	public bool rendered;
+	public bool rendered = false;
 	public bool autorise = true;
 
 	MeshFilter meshFilter;
@@ -51,8 +51,8 @@ public class Chunk : MonoBehaviour {
 			UpdateChunk ();
 		}
 
-		for (int i = 0; i < SeepBlocks.Count; i++)
-			SeepBlocks [i].Seep (Time.deltaTime);
+		/*for (int i = 0; i < SeepBlocks.Count; i++)
+			SeepBlocks [i].Seep (Time.deltaTime);*/
 	}
 
 	/*
@@ -89,7 +89,6 @@ public class Chunk : MonoBehaviour {
 	 * Output : void
 	 */
 	void UpdateChunk() {
-		rendered = true;
 		MeshData meshData = new MeshData ();
 
 		for (int x = 0; x < chunkWidth; x++) {
@@ -101,6 +100,7 @@ public class Chunk : MonoBehaviour {
 		}
 
 		RenderMesh (meshData);
+		rendered = true;
 	}
 
 	/*

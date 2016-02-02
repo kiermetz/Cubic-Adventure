@@ -33,6 +33,21 @@ public class TerrainGen {
 
 	public Chunk ChunkGenColumn (Chunk chunk, int x, int z, int posx, int posy, int posz) {
 
+		if (chunk.world.plane) {
+			for (int y = posy; y < posy + Chunk.chunkHeight; y++) {
+				if (y <= stoneBaseNoiseHeight)
+					SetBlock (x - posx, y - posy, z - posz, new Block (), chunk);
+				else if (y < stoneBaseNoiseHeight + dirtNoiseHeight)
+					SetBlock (x - posx, y - posy, z - posz, new BlockDirt (), chunk);
+				else if (y == stoneBaseNoiseHeight + dirtNoiseHeight)
+					SetBlock (x - posx, y - posy, z - posz, new BlockGrass (), chunk);
+				else
+					SetBlock (x - posx, y - posy, z - posz, new BlockAir (), chunk);
+			}
+
+			return chunk;
+		}
+
 		int stoneHeight = Mathf.FloorToInt (stoneBaseHeight);
 		stoneHeight += GetNoise (x, 0, z, stoneMountainFrequency, Mathf.FloorToInt (stoneMountainHeight), chunk.world.GetGrainOffset(0));
 
