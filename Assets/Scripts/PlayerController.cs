@@ -19,6 +19,7 @@ using System.Collections;
 public class PlayerController : MonoBehaviour {
 	
 	//public Text Coords;
+	public bool fly = false;
 	public float speed = 1.0f;
 	public float jumpSpeed = 4.0f;
 	public float gravity = 20.0f;
@@ -40,21 +41,31 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		time = Mathf.Min (Time.deltaTime, 0.04f);
-
-		if (controller.isGrounded) {
+		
+		if (fly == true) {
+			moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
+			
+			moveDirection = transform.TransformDirection (moveDirection);
+			moveDirection *= speed;
+			
+			if (Input.GetButton ("Jump"))
+				moveDirection.y = jumpSpeed;
+			if (Input.GetButton ("Fire1"))
+				moveDirection.y = -jumpSpeed;
+		} else if (controller.isGrounded) {
 			moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
 			moveDirection = transform.TransformDirection (moveDirection);
 			moveDirection *= speed;
 
 			if (Input.GetButtonDown ("Jump"))
 				moveDirection.y = jumpSpeed;
+			
+			moveDirection.y -= gravity * time;
 		}
 
 		moveRotate = new Vector3 (0.0f, Input.GetAxis ("Mouse X"), 0.0f);
 
 		transform.Rotate (moveRotate * time * rotateSpeed);
-		
-		moveDirection.y -= gravity * time;
 
 		controller.Move (moveDirection * time * 5);
 
