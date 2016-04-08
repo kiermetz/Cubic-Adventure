@@ -32,6 +32,8 @@ public class CameraController : MonoBehaviour {
 
 		offset = transform.position - player.transform.position;
 		xRotate = Vector3.zero;
+		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.visible = false;
 
 	}
 	

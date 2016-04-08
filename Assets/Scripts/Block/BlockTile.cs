@@ -6,15 +6,7 @@ using System;
 public class BlockTile : Block {
 
 	public BlockTile() :base() {
-	}
-
-	public override Tile TexturePosition(Direction direction)
-	{
-		Tile tile = new Tile ();
-
-		tile.x = 0;
-		tile.y = 2;
-		return tile;
+		SetMaterial (11);
 	}
 
 	public override bool IsTransparent(Direction direction)

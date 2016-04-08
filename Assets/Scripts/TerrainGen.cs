@@ -21,6 +21,7 @@ public class TerrainGen {
 
 	float lakesFrequency = 0.010f;
 	int lakesSize = 5;
+	static Town town = new Town ();
 
 	public Chunk ChunkGen(Chunk chunk, int posx, int posy, int posz){
 		for (int x = posx - 3; x < posx + 3 + Chunk.chunkWidth; x++) {
@@ -63,8 +64,65 @@ public class TerrainGen {
 		int lakesChance = GetNoise(x, 0, z, lakesFrequency, 100, chunk.world.GetGrainOffset(3));
 
 		int treeChance = GetNoise (x, 0, z, treeFrequency, 100, chunk.world.GetGrainOffset (4));
-
+		
 		for(int y = posy; y < posy + Chunk.chunkHeight; y++) {
+
+			if (x >= 0 && x <= 319 && z >= 0 && z <= 319) {
+				if (y <= 2) {
+					SetBlock (x - posx, y - posy, z - posz, new Block (), chunk);
+				} else if (y <= 4) {
+					SetBlock (x - posx, y - posy, z - posz, new BlockDirt (), chunk);
+				} else if (y <= 6) {
+					SetBlock (x - posx, y - posy, z - posz, new BlockGrass (), chunk);
+				}
+				if ((x%16 == 0 && z%16 == 0 && y==6)) {
+					CreateTown (x, y, z, posx, posy, posz, chunk);
+					SetBlock (x - posx, y - posy, z - posz, new BlockGrass (), chunk);
+				}
+				SetBlock (x - posx, y - posy, z - posz, new BlockAir (), chunk);
+			} else {
+
+				if (y <= stoneHeight)
+					SetBlock (x - posx, y - posy, z - posz, new Block (), chunk);
+				else if (y <= dirtHeight) {
+					if (lakesSize < lakesChance) {
+						if (y == dirtHeight)
+							SetBlock (x - posx, y - posy, z - posz, new BlockGrass (), chunk);
+						else
+							SetBlock (x - posx, y - posy, z - posz, new BlockDirt (), chunk);
+						if (y == dirtHeight && treeChance < treeDensity)
+							CreateTree (x - posx, y - posy + 1, z - posz, chunk);
+					} else {
+						if (y > stoneBaseHeight + stoneBaseNoiseHeight) {
+							SetBlock (x - posx, y - posy, z - posz, new BlockAir (), chunk);
+						} else {
+							/*SetBlock (x, y, z, new BlockWater (), chunk);
+							BlockWater newBlock = chunk.world.GetBlock (x, y, z) as BlockWater;
+							newBlock.SetWorld (chunk.world, x, y, z);
+							newBlock.RegisterForUpdate ();*/
+
+							BlockWater newBlock = new BlockWater ();
+							newBlock.SetWorld (chunk.world, x, y, z);
+							//newBlock.RegisterForUpdate ();
+							chunk.SeepBlocks.Add (newBlock);
+							SetBlock (x - posx, y - posy, z - posz, newBlock, chunk);
+						}
+
+					}
+				} else {
+					if (lakesSize < lakesChance || y > stoneBaseHeight + stoneBaseNoiseHeight) {
+						SetBlock (x - posx, y - posy, z - posz, new BlockAir (), chunk);
+					} else {
+						BlockWater newBlock = new BlockWater ();
+						newBlock.SetWorld (chunk.world, x, y, z);
+						chunk.SeepBlocks.Add (newBlock);
+						SetBlock (x - posx, y - posy, z - posz, newBlock, chunk);
+					}
+				}
+			}
+		}
+
+		/*for(int y = posy; y < posy + Chunk.chunkHeight; y++) {
 
 			if (y <= stoneHeight)
 				SetBlock (x - posx, y - posy, z - posz, new Block (), chunk);
@@ -85,7 +143,7 @@ public class TerrainGen {
 						/*SetBlock (x, y, z, new BlockWater (), chunk);
 						BlockWater newBlock = chunk.world.GetBlock (x, y, z) as BlockWater;
 						newBlock.SetWorld (chunk.world, x, y, z);
-						newBlock.RegisterForUpdate ();*/
+						newBlock.RegisterForUpdate ();
 
 						BlockWater newBlock = new BlockWater ();
 						newBlock.SetWorld (chunk.world, x, y, z);
@@ -107,7 +165,7 @@ public class TerrainGen {
 					SetBlock (x - posx, y - posy, z - posz, newBlock, chunk);
 				}
 			}
-		}
+		}*/
 
 		return chunk;
 	}
@@ -197,5 +255,25 @@ public class TerrainGen {
 		for (int yy = 0; yy < 10; yy++) {
 			SetBlock (x, y + yy, z, new BlockWood (), chunk, true);
 		}
+	}
+	
+	
+	/*
+	 * function void CreateTown() : Create the main town
+	 * Input : simple...
+	 * Output : void
+	 *
+	 */
+	void CreateTown(int x, int y, int z, int posx, int posy, int posz, Chunk chunk) {
+
+
+		for (int xi = 0; xi < 16; xi++) {
+			for (int yi = 0; yi < 40; yi++) {
+				for (int zi = 0; zi < 16; zi++) {
+					SetBlock (x-posx + xi, yi + y, z-posz + zi, town.blocksTown[xi + x, yi, zi + z], chunk, true);
+				}
+			}
+		}
+
 	}
 }

@@ -103,26 +103,33 @@ public class Chunk : MonoBehaviour {
 		rendered = true;
 	}
 
+
 	/*
-	 * function RenderMesh() : Sends the calculated mesh information to the mesh and collision components
-	 * Input : none
+	 * function RenderMesh() : Send the calculated mesh information to the mesh and collision components
+	 * Input : meshData
+	 * @meshData : The data of the chunk mesh
 	 * Output : void
 	 */
 	void RenderMesh(MeshData meshData) {
+
 		meshFilter.mesh.Clear ();
 		meshFilter.mesh.vertices = meshData.vertices.ToArray ();
-		meshFilter.mesh.triangles = meshData.triangles.ToArray ();
 		meshFilter.mesh.uv = meshData.uv.ToArray ();
+		//filter.mesh.triangles = meshData.triangles.ToArray ();
+		meshFilter.mesh.subMeshCount = 12;
+		for (int i = 0; i < 12; i++) {
+			meshFilter.mesh.SetTriangles (meshData.triangles[i].ToArray (), i);
+		}
 		meshFilter.mesh.RecalculateNormals ();
 
+		//collision
 		meshCollider.sharedMesh = null;
-		Mesh mesh = new Mesh();
-		mesh.vertices = meshData.vertices.ToArray ();
-		mesh.triangles = meshData.triangles.ToArray ();
+		Mesh mesh = new Mesh ();
+		mesh.vertices = meshData.colVertices.ToArray ();
+		mesh.triangles = meshData.colTriangles.ToArray ();
 		mesh.RecalculateNormals ();
 
 		meshCollider.sharedMesh = mesh;
-
 	}
 
 	public void SetBlockUnModified() {

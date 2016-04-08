@@ -6,15 +6,7 @@ using System;
 public class BlockWoodPlanks : Block {
 
 	public BlockWoodPlanks() :base() {
-	}
-
-	public override Tile TexturePosition(Direction direction)
-	{
-		Tile tile = new Tile ();
-
-		tile.x = 3;
-		tile.y = 2;
-		return tile;
+		SetMaterial (8);
 	}
 
 	public override bool IsTransparent(Direction direction)

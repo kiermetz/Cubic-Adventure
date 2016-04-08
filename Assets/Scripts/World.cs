@@ -18,10 +18,13 @@ public class World : MonoBehaviour {
 
 	void Awake ()
 	{
+		worldName = PlayerPrefs.GetString ("World Name");
+		seed = Int32.Parse(PlayerPrefs.GetString ("Seed"));
+		plane = Convert.ToBoolean(PlayerPrefs.GetString ("Plane"));
 		if (seed == 0) // if seed ==0 then seed is random
 			seed = UnityEngine.Random.Range(0, int.MaxValue);
 
-		SetGrainOffset (5);
+		SetGrainOffset (5, seed);
 	}
 
 	void Start() {
@@ -31,6 +34,7 @@ public class World : MonoBehaviour {
 	void Update() {
 		if (saving) {
 			ManualSave (this);
+			Serialization.SaveWorld(this);
 			saving = false;
 		}
 	}
@@ -42,9 +46,9 @@ public class World : MonoBehaviour {
 		}
 	}
 
-	public static void SetGrainOffset(int nb) {
+	public static void SetGrainOffset(int nb, int seed) {
 		grainOffset = new Vector3[nb];
-		//UnityEngine.Random.seed = world.seed;
+		UnityEngine.Random.seed = seed;
 
 		for(int i=0; i<nb; i++)
 			grainOffset[i] = new Vector3 (UnityEngine.Random.value * 10000, UnityEngine.Random.value * 10000, UnityEngine.Random.value * 10000);

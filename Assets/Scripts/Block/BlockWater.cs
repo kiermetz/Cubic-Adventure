@@ -11,6 +11,7 @@ public class BlockWater : Block {
 	float timer;
 
 	public BlockWater() :base() {
+		SetMaterial (7);
 	}
 
 	public override void Seep(float deltaTime) {
@@ -130,15 +131,6 @@ public class BlockWater : Block {
 			meshData = FaceDataWest (chunk, x, y, z, meshData);
 		}
 		return meshData;
-	}
-
-	public override Tile TexturePosition(Direction direction)
-	{
-		Tile tile = new Tile ();
-
-		tile.x = 3;
-		tile.y = 1;
-		return tile;
 	}
 
 	public override bool IsTransparent(Direction direction)
