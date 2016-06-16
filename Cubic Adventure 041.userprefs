@@ -1,0 +1,20 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\NPC\Enemy\EnemyAttack.cs">
+    <Files>
+      <File FileName="Assets\Scripts\NPC\Enemy\Wolf.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GUI\Begin_Interface\StartMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Save\Serialization.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GUI\VideoIntro.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\NPC\Enemy\EnemyAttack.cs" Line="63" Column="33" />
+      <File FileName="Assets\Scripts\Player\PlayerAttack.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\CharacterEvent.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\PlayerHealth.cs" Line="65" Column="30" />
+      <File FileName="Assets\Scripts\NPC\Enemy\Monster.cs" Line="97" Column="43" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

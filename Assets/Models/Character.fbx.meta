@@ -1,0 +1,1442 @@
+fileFormatVersion: 2
+guid: 53f4b7b0bae82bf4989753eb749fa66d
+timeCreated: 1461164118
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Arm.L
+    100002: Arm.L_end
+    100004: Arm.R
+    100006: Arm.R_end
+    100008: Armature
+    100010: Chest
+    100012: Cube
+    100014: Head
+    100016: Head_end
+    100018: Leg.L
+    100020: Leg.L_end
+    100022: Leg.R
+    100024: Leg.R_end
+    100026: //RootNode
+    100028: Weapon
+    100030: Weapon_end
+    400000: Arm.L
+    400002: Arm.L_end
+    400004: Arm.R
+    400006: Arm.R_end
+    400008: Armature
+    400010: Chest
+    400012: Cube
+    400014: Head
+    400016: Head_end
+    400018: Leg.L
+    400020: Leg.L_end
+    400022: Leg.R
+    400024: Leg.R_end
+    400026: //RootNode
+    400028: Weapon
+    400030: Weapon_end
+    4300000: Cube
+    7400000: Walk
+    7400002: Armature|Basic attack 1
+    7400004: Armature|Basic attack 2
+    7400006: Armature|Basic attack 3
+    7400008: Armature|Death
+    7400010: Armature|Death with weapon
+    7400012: Armature|Jump
+    7400014: Armature|Jump with weapon
+    7400016: Armature|Unproteted
+    7400018: Armature|Run
+    7400020: Armature|Run with weapon
+    7400022: Armature|Stationnary
+    7400024: Armature|Stationnary with weapon
+    7400026: Armature|Storing the  weapon
+    7400028: Armature|Swim
+    7400030: Armature|Walk
+    7400032: Armature|Walk with protection
+    7400034: Armature|Walk with weapon
+    7400036: Armature|Walk.001
+    7400038: Armature|State without weapon
+    7400040: Armature|unsheatle the weapon
+    7400042: Armature|State with weapon
+    7400044: Armature|Get protection
+    7400046: Armature|State protected
+    7400048: Armature|State without weapon
+    9500000: //RootNode
+    13700000: Cube
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|Basic attack 1
+      takeName: Armature|Basic attack 1
+      firstFrame: 0
+      lastFrame: 31
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.03454528
+        functionName: BasicAttack
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 1
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Chest
+        weight: 1
+      - path: Armature/Chest/Arm.L
+        weight: 1
+      - path: Armature/Chest/Arm.L/Arm.L_end
+        weight: 1
+      - path: Armature/Chest/Arm.R
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon/Weapon_end
+        weight: 1
+      - path: Armature/Chest/Head
+        weight: 1
+      - path: Armature/Chest/Head/Head_end
+        weight: 1
+      - path: Armature/Chest/Leg.L
+        weight: 1
+      - path: Armature/Chest/Leg.L/Leg.L_end
+        weight: 1
+      - path: Armature/Chest/Leg.R
+        weight: 1
+      - path: Armature/Chest/Leg.R/Leg.R_end
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Basic attack 2
+      takeName: Armature|Basic attack 2
+      firstFrame: 0
+      lastFrame: 31
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.037568092
+        functionName: BasicAttack
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 2
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Chest
+        weight: 1
+      - path: Armature/Chest/Arm.L
+        weight: 1
+      - path: Armature/Chest/Arm.L/Arm.L_end
+        weight: 1
+      - path: Armature/Chest/Arm.R
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon/Weapon_end
+        weight: 1
+      - path: Armature/Chest/Head
+        weight: 1
+      - path: Armature/Chest/Head/Head_end
+        weight: 1
+      - path: Armature/Chest/Leg.L
+        weight: 1
+      - path: Armature/Chest/Leg.L/Leg.L_end
+        weight: 1
+      - path: Armature/Chest/Leg.R
+        weight: 1
+      - path: Armature/Chest/Leg.R/Leg.R_end
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Basic attack 3
+      takeName: Armature|Basic attack 3
+      firstFrame: 0
+      lastFrame: 31
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.032941416
+        functionName: BasicAttack
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 3
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Chest
+        weight: 1
+      - path: Armature/Chest/Arm.L
+        weight: 1
+      - path: Armature/Chest/Arm.L/Arm.L_end
+        weight: 1
+      - path: Armature/Chest/Arm.R
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon/Weapon_end
+        weight: 1
+      - path: Armature/Chest/Head
+        weight: 1
+      - path: Armature/Chest/Head/Head_end
+        weight: 1
+      - path: Armature/Chest/Leg.L
+        weight: 1
+      - path: Armature/Chest/Leg.L/Leg.L_end
+        weight: 1
+      - path: Armature/Chest/Leg.R
+        weight: 1
+      - path: Armature/Chest/Leg.R/Leg.R_end
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Death
+      takeName: Armature|Death
+      firstFrame: 0
+      lastFrame: 38
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Chest
+        weight: 1
+      - path: Armature/Chest/Arm.L
+        weight: 1
+      - path: Armature/Chest/Arm.L/Arm.L_end
+        weight: 1
+      - path: Armature/Chest/Arm.R
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon/Weapon_end
+        weight: 1
+      - path: Armature/Chest/Head
+        weight: 1
+      - path: Armature/Chest/Head/Head_end
+        weight: 1
+      - path: Armature/Chest/Leg.L
+        weight: 1
+      - path: Armature/Chest/Leg.L/Leg.L_end
+        weight: 1
+      - path: Armature/Chest/Leg.R
+        weight: 1
+      - path: Armature/Chest/Leg.R/Leg.R_end
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Death with weapon
+      takeName: Armature|Death with weapon
+      firstFrame: 0
+      lastFrame: 38
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Chest
+        weight: 1
+      - path: Armature/Chest/Arm.L
+        weight: 1
+      - path: Armature/Chest/Arm.L/Arm.L_end
+        weight: 1
+      - path: Armature/Chest/Arm.R
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon/Weapon_end
+        weight: 1
+      - path: Armature/Chest/Head
+        weight: 1
+      - path: Armature/Chest/Head/Head_end
+        weight: 1
+      - path: Armature/Chest/Leg.L
+        weight: 1
+      - path: Armature/Chest/Leg.L/Leg.L_end
+        weight: 1
+      - path: Armature/Chest/Leg.R
+        weight: 1
+      - path: Armature/Chest/Leg.R/Leg.R_end
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Jump
+      takeName: Armature|Jump
+      firstFrame: 0
+      lastFrame: 32
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Chest
+        weight: 1
+      - path: Armature/Chest/Arm.L
+        weight: 1
+      - path: Armature/Chest/Arm.L/Arm.L_end
+        weight: 1
+      - path: Armature/Chest/Arm.R
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon/Weapon_end
+        weight: 1
+      - path: Armature/Chest/Head
+        weight: 1
+      - path: Armature/Chest/Head/Head_end
+        weight: 1
+      - path: Armature/Chest/Leg.L
+        weight: 1
+      - path: Armature/Chest/Leg.L/Leg.L_end
+        weight: 1
+      - path: Armature/Chest/Leg.R
+        weight: 1
+      - path: Armature/Chest/Leg.R/Leg.R_end
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Jump with weapon
+      takeName: Armature|Jump with weapon
+      firstFrame: 0
+      lastFrame: 32
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Chest
+        weight: 1
+      - path: Armature/Chest/Arm.L
+        weight: 1
+      - path: Armature/Chest/Arm.L/Arm.L_end
+        weight: 1
+      - path: Armature/Chest/Arm.R
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon/Weapon_end
+        weight: 1
+      - path: Armature/Chest/Head
+        weight: 1
+      - path: Armature/Chest/Head/Head_end
+        weight: 1
+      - path: Armature/Chest/Leg.L
+        weight: 1
+      - path: Armature/Chest/Leg.L/Leg.L_end
+        weight: 1
+      - path: Armature/Chest/Leg.R
+        weight: 1
+      - path: Armature/Chest/Leg.R/Leg.R_end
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Unproteted
+      takeName: Armature|Protection
+      firstFrame: 13
+      lastFrame: 25
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Chest
+        weight: 1
+      - path: Armature/Chest/Arm.L
+        weight: 1
+      - path: Armature/Chest/Arm.L/Arm.L_end
+        weight: 1
+      - path: Armature/Chest/Arm.R
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon/Weapon_end
+        weight: 1
+      - path: Armature/Chest/Head
+        weight: 1
+      - path: Armature/Chest/Head/Head_end
+        weight: 1
+      - path: Armature/Chest/Leg.L
+        weight: 1
+      - path: Armature/Chest/Leg.L/Leg.L_end
+        weight: 1
+      - path: Armature/Chest/Leg.R
+        weight: 1
+      - path: Armature/Chest/Leg.R/Leg.R_end
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Run
+      takeName: Armature|Run
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Chest
+        weight: 1
+      - path: Armature/Chest/Arm.L
+        weight: 1
+      - path: Armature/Chest/Arm.L/Arm.L_end
+        weight: 1
+      - path: Armature/Chest/Arm.R
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon/Weapon_end
+        weight: 1
+      - path: Armature/Chest/Head
+        weight: 1
+      - path: Armature/Chest/Head/Head_end
+        weight: 1
+      - path: Armature/Chest/Leg.L
+        weight: 1
+      - path: Armature/Chest/Leg.L/Leg.L_end
+        weight: 1
+      - path: Armature/Chest/Leg.R
+        weight: 1
+      - path: Armature/Chest/Leg.R/Leg.R_end
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Run with weapon
+      takeName: Armature|Run with weapon
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Chest
+        weight: 1
+      - path: Armature/Chest/Arm.L
+        weight: 1
+      - path: Armature/Chest/Arm.L/Arm.L_end
+        weight: 1
+      - path: Armature/Chest/Arm.R
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon/Weapon_end
+        weight: 1
+      - path: Armature/Chest/Head
+        weight: 1
+      - path: Armature/Chest/Head/Head_end
+        weight: 1
+      - path: Armature/Chest/Leg.L
+        weight: 1
+      - path: Armature/Chest/Leg.L/Leg.L_end
+        weight: 1
+      - path: Armature/Chest/Leg.R
+        weight: 1
+      - path: Armature/Chest/Leg.R/Leg.R_end
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Stationnary
+      takeName: Armature|Stationnary
+      firstFrame: 0
+      lastFrame: 144
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Chest
+        weight: 1
+      - path: Armature/Chest/Arm.L
+        weight: 1
+      - path: Armature/Chest/Arm.L/Arm.L_end
+        weight: 1
+      - path: Armature/Chest/Arm.R
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon/Weapon_end
+        weight: 1
+      - path: Armature/Chest/Head
+        weight: 1
+      - path: Armature/Chest/Head/Head_end
+        weight: 1
+      - path: Armature/Chest/Leg.L
+        weight: 1
+      - path: Armature/Chest/Leg.L/Leg.L_end
+        weight: 1
+      - path: Armature/Chest/Leg.R
+        weight: 1
+      - path: Armature/Chest/Leg.R/Leg.R_end
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Stationnary with weapon
+      takeName: Armature|Stationnary with weapon
+      firstFrame: 0
+      lastFrame: 144
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Chest
+        weight: 1
+      - path: Armature/Chest/Arm.L
+        weight: 1
+      - path: Armature/Chest/Arm.L/Arm.L_end
+        weight: 1
+      - path: Armature/Chest/Arm.R
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon/Weapon_end
+        weight: 1
+      - path: Armature/Chest/Head
+        weight: 1
+      - path: Armature/Chest/Head/Head_end
+        weight: 1
+      - path: Armature/Chest/Leg.L
+        weight: 1
+      - path: Armature/Chest/Leg.L/Leg.L_end
+        weight: 1
+      - path: Armature/Chest/Leg.R
+        weight: 1
+      - path: Armature/Chest/Leg.R/Leg.R_end
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Storing the  weapon
+      takeName: Armature|Storing and out the  weapon
+      firstFrame: 32
+      lastFrame: 65
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.46728972
+        functionName: Storing
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Chest
+        weight: 1
+      - path: Armature/Chest/Arm.L
+        weight: 1
+      - path: Armature/Chest/Arm.L/Arm.L_end
+        weight: 1
+      - path: Armature/Chest/Arm.R
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon/Weapon_end
+        weight: 1
+      - path: Armature/Chest/Head
+        weight: 1
+      - path: Armature/Chest/Head/Head_end
+        weight: 1
+      - path: Armature/Chest/Leg.L
+        weight: 1
+      - path: Armature/Chest/Leg.L/Leg.L_end
+        weight: 1
+      - path: Armature/Chest/Leg.R
+        weight: 1
+      - path: Armature/Chest/Leg.R/Leg.R_end
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Swim
+      takeName: Armature|Swim
+      firstFrame: 0
+      lastFrame: 32
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Chest
+        weight: 1
+      - path: Armature/Chest/Arm.L
+        weight: 1
+      - path: Armature/Chest/Arm.L/Arm.L_end
+        weight: 1
+      - path: Armature/Chest/Arm.R
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon/Weapon_end
+        weight: 1
+      - path: Armature/Chest/Head
+        weight: 1
+      - path: Armature/Chest/Head/Head_end
+        weight: 1
+      - path: Armature/Chest/Leg.L
+        weight: 1
+      - path: Armature/Chest/Leg.L/Leg.L_end
+        weight: 1
+      - path: Armature/Chest/Leg.R
+        weight: 1
+      - path: Armature/Chest/Leg.R/Leg.R_end
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Walk
+      takeName: Armature|Walk
+      firstFrame: 0
+      lastFrame: 32
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Chest
+        weight: 1
+      - path: Armature/Chest/Arm.L
+        weight: 1
+      - path: Armature/Chest/Arm.L/Arm.L_end
+        weight: 1
+      - path: Armature/Chest/Arm.R
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon/Weapon_end
+        weight: 1
+      - path: Armature/Chest/Head
+        weight: 1
+      - path: Armature/Chest/Head/Head_end
+        weight: 1
+      - path: Armature/Chest/Leg.L
+        weight: 1
+      - path: Armature/Chest/Leg.L/Leg.L_end
+        weight: 1
+      - path: Armature/Chest/Leg.R
+        weight: 1
+      - path: Armature/Chest/Leg.R/Leg.R_end
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Walk with protection
+      takeName: Armature|Walk with protection
+      firstFrame: 0
+      lastFrame: 32
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Chest
+        weight: 1
+      - path: Armature/Chest/Arm.L
+        weight: 1
+      - path: Armature/Chest/Arm.L/Arm.L_end
+        weight: 1
+      - path: Armature/Chest/Arm.R
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon/Weapon_end
+        weight: 1
+      - path: Armature/Chest/Head
+        weight: 1
+      - path: Armature/Chest/Head/Head_end
+        weight: 1
+      - path: Armature/Chest/Leg.L
+        weight: 1
+      - path: Armature/Chest/Leg.L/Leg.L_end
+        weight: 1
+      - path: Armature/Chest/Leg.R
+        weight: 1
+      - path: Armature/Chest/Leg.R/Leg.R_end
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Walk with weapon
+      takeName: Armature|Walk with weapon
+      firstFrame: 0
+      lastFrame: 32
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Chest
+        weight: 1
+      - path: Armature/Chest/Arm.L
+        weight: 1
+      - path: Armature/Chest/Arm.L/Arm.L_end
+        weight: 1
+      - path: Armature/Chest/Arm.R
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon/Weapon_end
+        weight: 1
+      - path: Armature/Chest/Head
+        weight: 1
+      - path: Armature/Chest/Head/Head_end
+        weight: 1
+      - path: Armature/Chest/Leg.L
+        weight: 1
+      - path: Armature/Chest/Leg.L/Leg.L_end
+        weight: 1
+      - path: Armature/Chest/Leg.R
+        weight: 1
+      - path: Armature/Chest/Leg.R/Leg.R_end
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|State without weapon
+      takeName: Armature|Death
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Chest
+        weight: 1
+      - path: Armature/Chest/Arm.L
+        weight: 1
+      - path: Armature/Chest/Arm.L/Arm.L_end
+        weight: 1
+      - path: Armature/Chest/Arm.R
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon/Weapon_end
+        weight: 1
+      - path: Armature/Chest/Head
+        weight: 1
+      - path: Armature/Chest/Head/Head_end
+        weight: 1
+      - path: Armature/Chest/Leg.L
+        weight: 1
+      - path: Armature/Chest/Leg.L/Leg.L_end
+        weight: 1
+      - path: Armature/Chest/Leg.R
+        weight: 1
+      - path: Armature/Chest/Leg.R/Leg.R_end
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|unsheatle the weapon
+      takeName: Armature|Storing and out the  weapon
+      firstFrame: 0
+      lastFrame: 32
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.49221185
+        functionName: Unsheatle
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Chest
+        weight: 1
+      - path: Armature/Chest/Arm.L
+        weight: 1
+      - path: Armature/Chest/Arm.L/Arm.L_end
+        weight: 1
+      - path: Armature/Chest/Arm.R
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon/Weapon_end
+        weight: 1
+      - path: Armature/Chest/Head
+        weight: 1
+      - path: Armature/Chest/Head/Head_end
+        weight: 1
+      - path: Armature/Chest/Leg.L
+        weight: 1
+      - path: Armature/Chest/Leg.L/Leg.L_end
+        weight: 1
+      - path: Armature/Chest/Leg.R
+        weight: 1
+      - path: Armature/Chest/Leg.R/Leg.R_end
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|State with weapon
+      takeName: Armature|Stationnary with weapon
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Chest
+        weight: 1
+      - path: Armature/Chest/Arm.L
+        weight: 1
+      - path: Armature/Chest/Arm.L/Arm.L_end
+        weight: 1
+      - path: Armature/Chest/Arm.R
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon/Weapon_end
+        weight: 1
+      - path: Armature/Chest/Head
+        weight: 1
+      - path: Armature/Chest/Head/Head_end
+        weight: 1
+      - path: Armature/Chest/Leg.L
+        weight: 1
+      - path: Armature/Chest/Leg.L/Leg.L_end
+        weight: 1
+      - path: Armature/Chest/Leg.R
+        weight: 1
+      - path: Armature/Chest/Leg.R/Leg.R_end
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Get protection
+      takeName: Armature|Protection
+      firstFrame: 0
+      lastFrame: 12
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Chest
+        weight: 1
+      - path: Armature/Chest/Arm.L
+        weight: 1
+      - path: Armature/Chest/Arm.L/Arm.L_end
+        weight: 1
+      - path: Armature/Chest/Arm.R
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon/Weapon_end
+        weight: 1
+      - path: Armature/Chest/Head
+        weight: 1
+      - path: Armature/Chest/Head/Head_end
+        weight: 1
+      - path: Armature/Chest/Leg.L
+        weight: 1
+      - path: Armature/Chest/Leg.L/Leg.L_end
+        weight: 1
+      - path: Armature/Chest/Leg.R
+        weight: 1
+      - path: Armature/Chest/Leg.R/Leg.R_end
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|State protected
+      takeName: Armature|Protection
+      firstFrame: 12
+      lastFrame: 13
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Chest
+        weight: 1
+      - path: Armature/Chest/Arm.L
+        weight: 1
+      - path: Armature/Chest/Arm.L/Arm.L_end
+        weight: 1
+      - path: Armature/Chest/Arm.R
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon
+        weight: 1
+      - path: Armature/Chest/Arm.R/Weapon/Weapon_end
+        weight: 1
+      - path: Armature/Chest/Head
+        weight: 1
+      - path: Armature/Chest/Head/Head_end
+        weight: 1
+      - path: Armature/Chest/Leg.L
+        weight: 1
+      - path: Armature/Chest/Leg.L/Leg.L_end
+        weight: 1
+      - path: Armature/Chest/Leg.R
+        weight: 1
+      - path: Armature/Chest/Leg.R/Leg.R_end
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

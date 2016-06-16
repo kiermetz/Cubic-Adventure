@@ -13,8 +13,7 @@ public class Block {
 
 	public enum Direction { north, east, south, west, up, down };
 
-	public struct Tile {public int x; public int y;}
-	const float tileSize = 0.25f;
+	public int[] material = {0,0,0,0,0,0};
 
 	public bool changed = true;
 
@@ -75,7 +74,7 @@ public class Block {
 		meshData.AddVertex(new Vector3(x + 0.5f, y + 0.5f, z - 0.5f));
 		meshData.AddVertex(new Vector3(x - 0.5f, y + 0.5f, z - 0.5f));
 
-		meshData.AddQuadTriangles ();
+		meshData.AddQuadTriangles (material[0]);
 		meshData.uv.AddRange (FaceUVs (Direction.up));
 
 		return meshData;
@@ -87,7 +86,7 @@ public class Block {
 		meshData.AddVertex(new Vector3(x + 0.5f, y - 0.5f, z + 0.5f));
 		meshData.AddVertex(new Vector3(x - 0.5f, y - 0.5f, z + 0.5f));
 
-		meshData.AddQuadTriangles ();
+		meshData.AddQuadTriangles (material[1]);
 		meshData.uv.AddRange (FaceUVs (Direction.down));
 
 		return meshData;
@@ -99,7 +98,7 @@ public class Block {
 		meshData.AddVertex(new Vector3(x - 0.5f, y + 0.5f, z + 0.5f));
 		meshData.AddVertex(new Vector3(x - 0.5f, y - 0.5f, z + 0.5f));
 
-		meshData.AddQuadTriangles ();
+		meshData.AddQuadTriangles (material[2]);
 		meshData.uv.AddRange (FaceUVs (Direction.north));
 
 		return meshData;
@@ -111,7 +110,7 @@ public class Block {
 		meshData.AddVertex(new Vector3(x + 0.5f, y + 0.5f, z - 0.5f));
 		meshData.AddVertex(new Vector3(x + 0.5f, y - 0.5f, z - 0.5f));
 
-		meshData.AddQuadTriangles ();
+		meshData.AddQuadTriangles (material[3]);
 		meshData.uv.AddRange (FaceUVs (Direction.south));
 
 		return meshData;
@@ -123,7 +122,7 @@ public class Block {
 		meshData.AddVertex(new Vector3(x - 0.5f, y + 0.5f, z - 0.5f));
 		meshData.AddVertex(new Vector3(x - 0.5f, y - 0.5f, z - 0.5f));
 
-		meshData.AddQuadTriangles ();
+		meshData.AddQuadTriangles (material[5]);
 		meshData.uv.AddRange (FaceUVs (Direction.west));
 
 		return meshData;
@@ -135,7 +134,7 @@ public class Block {
 		meshData.AddVertex(new Vector3(x + 0.5f, y + 0.5f, z + 0.5f));
 		meshData.AddVertex(new Vector3(x + 0.5f, y - 0.5f, z + 0.5f));
 
-		meshData.AddQuadTriangles ();
+		meshData.AddQuadTriangles (material[4]);
 		meshData.uv.AddRange (FaceUVs (Direction.east));
 
 		return meshData;
@@ -166,24 +165,44 @@ public class Block {
 		return false;
 	}
 
-	public virtual Tile TexturePosition(Direction direction)
-	{
-		Tile tile = new Tile ();
-		tile.x = 0;
-		tile.y = 0;
-
-		return tile;
-	}
-
 	public virtual Vector2[] FaceUVs(Direction direction) {
 		Vector2[] UVs = new Vector2[4];
-		Tile tilePos = TexturePosition (direction);
 
-		UVs [0] = new Vector2 (tileSize * tilePos.x + tileSize, tileSize * tilePos.y);
-		UVs [1] = new Vector2 (tileSize * tilePos.x + tileSize, tileSize * tilePos.y + tileSize);
-		UVs [2] = new Vector2 (tileSize * tilePos.x, tileSize * tilePos.y + tileSize);
-		UVs [3] = new Vector2 (tileSize * tilePos.x, tileSize * tilePos.y);
+		UVs [0] = new Vector2 (1,0);
+		UVs [1] = new Vector2 (1,1);
+		UVs [2] = new Vector2 (0,1);
+		UVs [3] = new Vector2 (0,0);
 
 		return UVs;
+	}
+
+	/*
+	 * function void SetMaterial : set the face material of the block to the same material
+	 * Input : int materialNumber
+	 * @materialNumber : the material number (See Unity)
+	 * Output : void
+	 * 
+	 */
+	public void SetMaterial(int materialNumber) {
+		for (int i = 0; i < 6; i++) {
+			material [i] = materialNumber;
+		}
+	}
+
+	/*
+	 * function void SetMaterial : set all faces material
+	 * Input : int materialSide, int materialUp, int materialDown
+	 * @materialSide : the material number to the side face
+	 * @materialUp : the material number to the up face
+	 * @materialDown : the material number to the down face
+	 * Output : void
+	 * 
+	 */
+	public void SetMaterial(int materialSide, int materialUp, int materialDown) {
+		material [0] = materialUp;
+		material [1] = materialDown;
+		for (int i = 2; i < 6; i++) {
+			material [i] = materialSide;
+		}
 	}
 }
