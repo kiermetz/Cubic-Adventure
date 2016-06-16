@@ -140,17 +140,20 @@ public class StartMenu : MonoBehaviour {
 				}
 			}
 		}
-		foreach (string s in Directory.GetDirectories(saveFolder))
-		{
-			String world = s.Substring (saveFolder.Length);
-			if (world == worldName.text) {
-				nameError.SetActive(true);
-				noNameError.SetActive (false);
-				symbolsError.SetActive(false);
-				spaceError.SetActive (false);
-				return;
+		if (Directory.Exists (saveFolder)) {
+			foreach (string s in Directory.GetDirectories(saveFolder))
+			{
+				String world = s.Substring (saveFolder.Length);
+				if (world == worldName.text) {
+					nameError.SetActive(true);
+					noNameError.SetActive (false);
+					symbolsError.SetActive(false);
+					spaceError.SetActive (false);
+					return;
+				}
 			}
 		}
+
 		if (worldName.text == "") {
 			noNameError.SetActive (true);
 			symbolsError.SetActive(false);
