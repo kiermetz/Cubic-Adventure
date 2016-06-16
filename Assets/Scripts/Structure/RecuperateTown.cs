@@ -10,7 +10,6 @@ using System.Runtime.Serialization;
 public class RecuperateTown {
 
 	Dictionary<WorldPos, Chunk> chunksTown = new Dictionary<WorldPos, Chunk> ();
-<<<<<<< HEAD
 	public Block[,,] blocksTown = new Block[340, 40, 340];
 	public int[,,] intBlocksTown = new int[340, 40, 340];
 
@@ -18,15 +17,6 @@ public class RecuperateTown {
 
 		for (int x = 0; x < 320; x += 16) {
 			for (int z = 0; z < 320; z += 16) {
-=======
-	public Block[,,] blocksTown = new Block[320, 40, 320];
-	public int[,,] intBlocksTown = new int[320, 40, 320];
-
-	public void LoadTown() {
-
-		for (int x = 0; x < 150; x += 16) {
-			for (int z = 0; z < 150; z += 16) {
->>>>>>> origin/master
 				CreateChunk (x, 0, z);
 			}
 		}
@@ -49,11 +39,7 @@ public class RecuperateTown {
 
 		chunksTown.Add (worldPos, newChunk);
 
-<<<<<<< HEAD
 		Serialization.LoadT (newChunk, "saves/laby/world/");
-=======
-		//Serialization.Load (newChunk, "saves/plane/");
->>>>>>> origin/master
 	}
 
 	public Chunk GetChunk(int x, int y, int z) {
@@ -73,7 +59,6 @@ public class RecuperateTown {
 
 	public void chunkToTown() {
 
-<<<<<<< HEAD
 		for (int x = 0; x < 320; x++) {
 			for (int y = 0; y < 39; y++) {
 				for (int z = 0; z < 320; z++) {
@@ -88,13 +73,6 @@ public class RecuperateTown {
 						intBlocksTown [x, y, z] = 7;
 					else if(intBlocksTown [x, y, z] != 8)
 						intBlocksTown [x, y, z] = 0;
-=======
-		for (int x = 0; x < 160; x++) {
-			for (int y = 0; y < 39; y++) {
-				for (int z = 0; z < 160; z++) {
-					Chunk chunk = GetChunk (x, y, z);
-					blocksTown [x, y, z] = chunk.blocks [x - chunk.pos.x, y - chunk.pos.y, z - chunk.pos.z];
->>>>>>> origin/master
 				}
 			}
 		}
@@ -102,17 +80,10 @@ public class RecuperateTown {
 
 	public void Save() {
 		string saveFile = SaveLocation ("construction/Town/");
-<<<<<<< HEAD
 		saveFile += "Towndemo.bin";
 		IFormatter formatter = new BinaryFormatter ();
 		Stream stream = new FileStream (saveFile, FileMode.Create, FileAccess.Write, FileShare.None);
 		formatter.Serialize (stream, intBlocksTown);
-=======
-		saveFile += "Town1.bin";
-		IFormatter formatter = new BinaryFormatter ();
-		Stream stream = new FileStream (saveFile, FileMode.Create, FileAccess.Write, FileShare.None);
-		formatter.Serialize (stream, blocksTown);
->>>>>>> origin/master
 		stream.Close ();
 	}
 
