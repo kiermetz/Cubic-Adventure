@@ -1,4 +1,0 @@
-World : test
-Seed : 1535779941
-Plane : False
-StoryEvent : 3

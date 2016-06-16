@@ -1,4 +1,0 @@
-World : demo3
-Seed : 0
-Plane : False
-StoryEvent : 0

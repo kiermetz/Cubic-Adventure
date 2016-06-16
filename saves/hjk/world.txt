@@ -1,4 +1,0 @@
-World : hjk
-Seed : 703815630
-Plane : False
-StoryEvent : 6
