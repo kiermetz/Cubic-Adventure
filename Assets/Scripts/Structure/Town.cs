@@ -9,7 +9,11 @@ using System.Runtime.Serialization;
 [Serializable]
 public class Town {
 
+<<<<<<< HEAD
 	public Block[,,] blocksTown = new Block[340, 60, 340];
+=======
+	public Block[,,] blocksTown = new Block[320, 60, 320];
+>>>>>>> origin/master
 
 	public Town() {
 		Load ();
@@ -17,8 +21,12 @@ public class Town {
 
 	public bool Load() {
 		string saveFile = "construction/Town/";
+<<<<<<< HEAD
 		//saveFile += "Town1.bin";
 		saveFile += "Towndemo.bin";
+=======
+		saveFile += "Town1.bin";
+>>>>>>> origin/master
 
 		if (!File.Exists (saveFile))
 			return false;
@@ -28,7 +36,11 @@ public class Town {
 
 		//chunk.blocks = (Block[,,])formatter.Deserialize (stream);
 
+<<<<<<< HEAD
 		/*Block[,,] save = (Block[,,])formatter.Deserialize (stream);
+=======
+		Block[,,] save = (Block[,,])formatter.Deserialize (stream);
+>>>>>>> origin/master
 		for (int x = 0; x < 320; x++) {
 			for (int y = 0; y < 50; y++) {
 				for (int z = 0; z < 320; z++) {
@@ -57,6 +69,7 @@ public class Town {
 						blocksTown[x,y,z] = new Block();
 				}
 			}
+<<<<<<< HEAD
 		}*/
 
 		int[,,] save = (int[,,])formatter.Deserialize (stream);
@@ -75,6 +88,10 @@ public class Town {
 				}
 			}
 		}
+=======
+		}
+
+>>>>>>> origin/master
 		stream.Close ();
 		return true;
 	}

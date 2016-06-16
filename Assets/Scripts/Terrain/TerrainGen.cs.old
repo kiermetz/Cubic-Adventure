@@ -21,6 +21,7 @@ public class TerrainGen {
 
 	float lakesFrequency = 0.010f;
 	int lakesSize = 5;
+	static Town town = new Town ();
 
 	int biomesSize = 90;
 	float biomesFrequency = 0.010f;
@@ -53,6 +54,7 @@ public class TerrainGen {
 			return chunk;
 		}
 
+<<<<<<< HEAD:Assets/Scripts/Terrain/TerrainGen.cs.old
 		int biomeChance = GetNoise (x, 0, z, biomesFrequency, 100, chunk.world.GetGrainOffset (5));
 
 		/*if (biomeChance < biomesSize) {
@@ -87,6 +89,8 @@ public class TerrainGen {
 			lakesSize = 5;
 		}*/
 
+=======
+>>>>>>> origin/master:Assets/Scripts/TerrainGen.cs
 		int stoneHeight = Mathf.FloorToInt (stoneBaseHeight);
 		stoneHeight += GetNoise (x, 0, z, stoneMountainFrequency, Mathf.FloorToInt (stoneMountainHeight), chunk.world.GetGrainOffset(0));
 

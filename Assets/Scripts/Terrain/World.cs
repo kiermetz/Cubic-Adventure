@@ -16,13 +16,17 @@ public class World : MonoBehaviour {
 	public int seed;
 	public static Vector3[] grainOffset;
 	public bool plane = false;
+<<<<<<< HEAD:Assets/Scripts/Terrain/World.cs
 	public int SE = StoryEvent.getIntroEvent();
+=======
+>>>>>>> origin/master:Assets/Scripts/World.cs
 
 	void Awake ()
 	{
 		worldName = PlayerPrefs.GetString ("World Name");
 		seed = Int32.Parse(PlayerPrefs.GetString ("Seed"));
 		plane = Convert.ToBoolean(PlayerPrefs.GetString ("Plane"));
+<<<<<<< HEAD:Assets/Scripts/Terrain/World.cs
 		StoryEvent.setIntroEvent(Int32.Parse(PlayerPrefs.GetString ("Story Event")));
 		if (seed == 0) // if seed ==0 then seed is random
 			seed = UnityEngine.Random.Range(0, int.MaxValue);
@@ -30,10 +34,17 @@ public class World : MonoBehaviour {
 		SetGrainOffset (6, seed);
 
         VRSettings.enabled = !VRSettings.enabled;
+=======
+		if (seed == 0) // if seed ==0 then seed is random
+			seed = UnityEngine.Random.Range(0, int.MaxValue);
+
+		SetGrainOffset (5, seed);
+>>>>>>> origin/master:Assets/Scripts/World.cs
 	}
 
 	void Start() {
 		
+<<<<<<< HEAD:Assets/Scripts/Terrain/World.cs
 	}
 
 	void Update() {
@@ -45,6 +56,18 @@ public class World : MonoBehaviour {
 		}
 	}
 
+=======
+	}
+
+	void Update() {
+		if (saving) {
+			ManualSave (this);
+			Serialization.SaveWorld(this);
+			saving = false;
+		}
+	}
+
+>>>>>>> origin/master:Assets/Scripts/World.cs
 	public void ManualSave(World world) {
 		foreach (Chunk chunk in world.chunks.Values)
 		{
